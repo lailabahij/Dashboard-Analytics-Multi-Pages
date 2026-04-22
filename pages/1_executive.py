@@ -20,12 +20,12 @@ col2.metric("Transactions", kpis['tx'])
 col3.metric("Clients", kpis['clients'])
 col4.metric("Panier Moyen", f"{kpis['avg']:.2f}")
 
-st.subheader("📈 Evolution temporelle")
+#Evolution mensuelle du chiffre d'affaires
 time_df = get_time_data()
 line_transactions(time_df)
 
-st.subheader("🏦 CA par agence")
+#Chiffre d'affaires par agence
 bar_ca_agence(get_ca_agence())
 
-st.subheader("👥 Segments")
+#Segments
 pie_segment(df)
